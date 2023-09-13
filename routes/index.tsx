@@ -1,5 +1,4 @@
 import { useSignal } from "@preact/signals";
-import Counter from "../islands/Counter.tsx";
 import Grid from "../components/Grid.tsx";
 
 export default function Home() {
@@ -26,9 +25,10 @@ export default function Home() {
       url: "https://www.savvysenders.com/",
     },
   ];
+
   return (
     <div class="flex flex-col h-full">
-      <div class="container mx-auto px-4" style="max-width: 700px;">
+      <div class="mx-auto px-4">
         <main id="main" class="mt-4 mb-16">
           <div id="home-jumbotron" class="text-center p-4 bg-transparent">
             <h1 class="text-4xl">Home</h1>
@@ -40,7 +40,12 @@ export default function Home() {
               &amp; blog posts.
             </h2>
             <p class="mt-4">
-              <a href="/contact">Contact Details</a>
+              <a
+                href="/contact"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Contact Details
+              </a>
             </p>
             <hr class="my-4" />
             <Grid grid={grid} />

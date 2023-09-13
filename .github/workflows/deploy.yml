@@ -1,0 +1,31 @@
+name: Deploy JamesDavidClarkeDotCom Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy to Server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        port: 1024
+        username: ${{ secrets.SERVER_USERNAME }}
+        password: ${{ secrets.SERVER_PASSWORD }}
+        script: |
+          rm -rf JamesDavidClarkeDotCom
+          git clone https://github.com/JamesClarke7283/JamesDavidClarkeDotCom
+          cd JamesDavidClarkeDotCom
+          docker container stop jamesdavidclarkedotcom || true
+          docker container rm jamesdavidclarkedotcom || true
+          docker build -t jamesdavidclarkedotcom .
+          docker run -d --name jamesdavidclarkedotcom -p 6542:8000 jamesdavidclarkedotcom:latest
+          echo "Website is running on port 6542"
