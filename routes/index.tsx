@@ -1,8 +1,31 @@
 import { useSignal } from "@preact/signals";
 import Counter from "../islands/Counter.tsx";
+import Grid from "../components/Grid.tsx";
 
 export default function Home() {
   const count = useSignal(3);
+  const grid = [
+    {
+      title: "Freedom",
+      icon_classes: "fa fa-heart text-red-500",
+      description: "All software I develop is free as in freedom.",
+      url: "https://git.jamesdavidclarke.com/james/",
+    },
+    {
+      title: "Tutorials",
+      icon_classes: "fa fa-university",
+      description:
+        "I provide tutorials on many subjects including GNU/Linux, Python, Assembly, etc.",
+      url: "https://jamesdavidclarke.com/tutorials",
+    },
+    {
+      title: "Services",
+      icon_classes: "fa fa-briefcase",
+      description:
+        "Provide services such as email marketing and bespoke software solutions.",
+      url: "https://www.savvysenders.com/",
+    },
+  ];
   return (
     <div class="flex flex-col h-full">
       <div class="container mx-auto px-4" style="max-width: 700px;">
@@ -20,44 +43,7 @@ export default function Home() {
               <a href="/contact">Contact Details</a>
             </p>
             <hr class="my-4" />
-            <div class="flex justify-around">
-              <div>
-                <h2 id="freedom" class="text-2xl">Freedom</h2>
-                <i class="fa fa-heart text-red-500"></i>
-                <p class="mt-4">
-                  All software I develop is free as in freedom.
-                </p>
-                <p class="mt-4">
-                  <a href="https://git.jamesdavidclarke.com/james/">
-                    View details
-                  </a>
-                </p>
-              </div>
-              <div>
-                <h2 id="tutorials" class="text-2xl">Tutorials</h2>
-                <i class="fa fa-university"></i>
-                <p class="mt-4">
-                  I provide tutorials on many subjects including GNU/Linux,
-                  Python, Assembly, etc.
-                </p>
-                <p class="mt-4">
-                  <a href="https://jamesdavidclarke.com/tutorials">
-                    View details
-                  </a>
-                </p>
-              </div>
-              <div>
-                <h2 id="services" class="text-2xl">Services</h2>
-                <i class="fa fa-briefcase"></i>
-                <p class="mt-4">
-                  Provide services such as email marketing and bespoke software
-                  solutions.
-                </p>
-                <p class="mt-4">
-                  <a href="https://www.savvysenders.com/">View details</a>
-                </p>
-              </div>
-            </div>
+            <Grid grid={grid} />
             <hr class="my-4" />
           </div>
         </main>
