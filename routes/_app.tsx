@@ -35,7 +35,7 @@ Disclaimer: The art assets from the above section are from Feather Icons. Copyri
       </body>
       <footer id="footer" class="mt-auto text-center text-gray-500 py-4">
         <div class="container mx-auto px-4">
-          <a href="#" class="underline text-current">Some Link</a>
+          <strong>James David Clarke</strong> &copy; 2023 All Rights Reserved.
         </div>
       </footer>
     </html>
