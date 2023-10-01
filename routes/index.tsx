@@ -8,7 +8,7 @@ export default function Home() {
       title: "Freedom",
       icon_classes: "fa fa-heart text-red-500",
       description: "All software I develop is free as in freedom.",
-      url: "https://git.jamesdavidclarke.com/james/",
+      url: "https://github.com/JamesClarke7283/",
     },
     {
       title: "Tutorials",

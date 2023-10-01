@@ -58,16 +58,16 @@ export default function Contact() {
                   <a href="https://xmpp.org/">XMPP</a>
                 </td>
                 <td class="py-2 px-4">
-                  <a href="xmpp:james@james-clarke.ynh.fr">
-                    <strong>james@james-clarke.ynh.fr</strong>
+                  <a href="xmpp:james@jamesdavidclarke.com">
+                    <strong>james@jamesdavidclarke.com</strong>
                   </a>
                 </td>
               </tr>
               <tr class="even">
                 <td class="py-2 px-4">Email</td>
                 <td class="py-2 px-4">
-                  <a href="mailto:james@james-clarke.ynh.fr">
-                    <strong>james@james-clarke.ynh.fr</strong>
+                  <a href="mailto:james@jamesdavidclarke.com">
+                    <strong>james@jamesdavidclarke.com</strong>
                   </a>
                 </td>
               </tr>
